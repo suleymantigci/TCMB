@@ -1,0 +1,38 @@
+﻿@using TCMB.Entities
+@model IEnumerable<Currency>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr style="font-weight: bold">
+                <td>Unit</td>
+                <td>CurrencyCode</td>
+                <td>Isim</td>
+                <td>CurrencyName</td>
+                <td>ForexBuying</td>
+                <td>ForexSelling</td>
+                <td>BanknoteBuying</td>
+                <td>BanknoteSelling</td>
+                <td>CrossRateUSD</td>
+                <td>CrossRateOther</td>
+            </tr>
+        </thead>
+        @foreach (Currency currency in Model)
+        {
+            <tr>
+                <td>@currency.Unit</td>
+                <td>@currency.CurrencyCode</td>
+                <td>@currency.Isim</td>
+                <td>@currency.CurrencyName</td>
+                <td>@currency.ForexBuying</td>
+                <td>@currency.ForexSelling</td>
+                <td>@currency.BanknoteBuying</td>
+                <td>@currency.BanknoteSelling</td>
+                <td>@currency.CrossRateUSD</td>
+                <td>@currency.CrossRateOther</td>
+            </tr>
+        }
+    </table>
+</div>
